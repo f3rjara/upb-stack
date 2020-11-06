@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- CCS Custom-->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <div class="row row-logo">
+            <div class="col s8 push-s2 m6 push-m3 l8 push-l2 center">
+                <img src="img/playtic.svg" alt="PlayTIC" class="img-nav" >
+            </div>
+        </div>
+        <div class="row container subscribe">
+            <div class="col s12 m12 center">
+                <h3>Suscríbete a nuestro boletín</h3>
+                <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="row">
+                    <div class="col s12">
+                      <div class="card-panel white card-form">
+                        <span class="black-text">
+                            Por favor complete cada uno de los campos.
+                        </span>
+
+                        <div class="row">
+                            <form class="col s12 form-news" autocomplete="off" id="formNewsletter">
+                                <div class="row">                                    
+                                    <div class="input-field col s12 m10 push-m1 l6">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="fr_name" type="text" class="validate" minlength="3" pattern="[a-zA-Z\s]{3,30}" maxlength="30" required>
+                                        <span class="helper-text" data-error="Digite un nombre valido" data-success="Muy bien!"></span>
+                                        <label for="fr_name">Nombres</label>
+                                    </div>
+                                    <div class="input-field col s12 m10 push-m1 l6">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="fr_email" type="email" class="validate" required>
+                                        <span class="helper-text" data-error="Digite un correo valido" data-success="Muy bien!"></span>
+                                        <label for="fr_email">Correo</label>
+                                    </div>
+
+                                    <div class="input-field col s12 m10 push-m1 l6 input-subs">   
+                                        <i class="material-icons prefix">new_releases</i>
+                                        <input id="fr_news" type="text" value="¿Qué noticias desea recibir?" disabled class="black-text"> 
+                                        <label for="fr_news">Subscripción</label>
+                                        <p>
+                                            <label>
+                                            <input class="with-gap" name="news_option" value="all-news" type="radio" required />
+                                            <span class="black-text">Todas las noticias</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                            <input class="with-gap" name="news_option" value="only-tech" type="radio" required />
+                                            <span class="black-text">Solo las noticias de técnología</span>
+                                            </label>
+                                        </p>
+                                        
+                                    </div>
+
+                                    <div class="input-field col s12 m10 push-m1 l6">
+                                        <i class="material-icons prefix">location_on</i>
+                                        <select required id="fr_city">
+                                          <option value="" disabled selected>Seleccione una opción</option>
+                                          <option value="Bogotá">Bogotá</option>
+                                          <option value="Medellín">Medellín</option>
+                                          <option value="Cali">Cali</option>
+                                          <option value="Pasto">Pasto</option>
+                                        </select>
+                                        <label>Ciudad</label>
+                                      </div>
+                                    </div>
+
+                                    <div class="input-field col s12 m6">
+                                        <p>
+                                            <label>
+                                            <input id="fr_offers" type="checkbox" value="offers" required />
+                                            <span class="black-text">Acepto recibir información sobre ofertas</span>
+                                            </label>
+                                        </p>
+
+                                        <p>
+                                            <label>
+                                            <input id="fr_terms" type="checkbox" value="terms" required/>
+                                            <span class="black-text">Acepto términos y condiciones del sitio</span>
+                                            </label>
+                                        </p>
+                                    </div>
+
+                                    <div class="input-field col s12 m6">
+                                        <button class="btn waves-effect waves-light green darken-2 col s12" type="submit" name="submit">
+                                            Suscribirme
+                                            <i class="material-icons right">send</i>
+                                          </button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="js/materialize.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+    </body>
+  </html>
