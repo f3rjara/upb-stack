@@ -1,10 +1,7 @@
+import { dom_components, form_components } from './dom.js'
+import { loading, listenerEvent } from './load.js'
+import { sendForm } from './send_form.js'
+
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, {});
-
-    M.toast({
-        html: 'Data updated Successfully',
-        classes: 'red darken-1 rounded'
-    });
-
+    loading();
 });

@@ -9,6 +9,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!-- CCS Custom-->
         <link rel="stylesheet" href="css/main.css">
+        <!-- favicon html -->
+        <link rel="icon" type="image/png" href="./img/logo.png">
+        <!-- Modules for app -->
+        <script type="module" src="js/dom.js"></script>
+        <script type="module" src="js/load.js"></script>
+        <script type="module" src="js/send_form.js"></script>
+        <script type="module" src="js/subscription.js"></script>        
     </head>
 
     <body>
@@ -67,10 +74,10 @@
                                         
                                     </div>
 
-                                    <div class="input-field col s12 m10 push-m1 l6">
+                                    <div class="input-field col s12 m10 push-m1 l6" id="input_select">
                                         <i class="material-icons prefix">location_on</i>
                                         <select required id="fr_city">
-                                          <option value="" disabled selected>Seleccione una opción</option>
+                                          <option value='null' disabled selected>Seleccione una opción</option>
                                           <option value="Bogotá">Bogotá</option>
                                           <option value="Medellín">Medellín</option>
                                           <option value="Cali">Cali</option>
@@ -80,7 +87,7 @@
                                       </div>
                                     </div>
 
-                                    <div class="input-field col s12 m6">
+                                    <div class="input-field col s12 m10 push-m1 l6" >
                                         <p>
                                             <label>
                                             <input id="fr_offers" type="checkbox" value="offers" required />
@@ -91,12 +98,12 @@
                                         <p>
                                             <label>
                                             <input id="fr_terms" type="checkbox" value="terms" required/>
-                                            <span class="black-text">Acepto términos y condiciones del sitio</span>
+                                            <span><a class="black-text modal-trigger" href="#modal1" >Acepto términos y condiciones del sitio</a></span>
                                             </label>
                                         </p>
                                     </div>
 
-                                    <div class="input-field col s12 m6">
+                                    <div class="input-field col s12 m10 push-m1 l6">
                                         <button class="btn waves-effect waves-light green darken-2 col s12" type="submit" name="submit">
                                             Suscribirme
                                             <i class="material-icons right">send</i>
@@ -112,11 +119,40 @@
                   </div>
             </div>
         </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content text-center">
+            <h4>Términos y Condiciones de Uso de Sitio Web</h4>
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+            <h5><b>1. ACEPTACIÓN </b></h5>
+            <p style="text-align: justify;">
+                En el presente documento (en adelante, el “Contrato”) se establecen los términos y condiciones de Robert Half Internacional Empresa de Servicios Transitorios Limitada, con domicilio en Avenida Isidora Goyenechea 2800 Piso 15. Torre Titanium 7550-647 Las Condes, que serán de aplicación al acceso y uso por parte del Usuario de esta página web (el  “Sitio Web”). Les rogamos lean atentamente el presente Contrato. 
+                Al acceder, consultar o utilizar el Sitio Web, los Usuarios (“Vd.”, “usted”, “Usuario”, o “usuario”) aceptan cumplir los términos y condiciones establecidos en este Contrato. En caso de que usted no acepte quedar vinculado por los presentes términos y condiciones, no podrá acceder a, ni utilizar, el Sitio Web. 
+                Robert Half Internacional Empresa de Servicios Transitorios Limitada y sus respectivas empresas afiliadas (en conjunto, “RH”) se reservan el derecho de actualizar el presente Contrato siempre que lo consideren oportuno. En consecuencia, recomendamos al Usuario revisar periódicamente las modificaciones efectuadas al Contrato.
+                El presente Sitio Web está dirigido exclusivamente a personas residentes en Chile. Los Usuarios residentes o domiciliados en otro país que deseen acceder y utilizar el Sitio Web, lo harán bajo su propio riesgo y responsabilidad, por lo que deberán asegurarse de que dichos accesos y/o usos cumplen con la legislación aplicable en su país.
+            </p>
+            </div>
+            <div class="modal-footer">
+            <a class="waves-effect waves-light btn modal-close red white-text" id="cancel-terms">
+                <i class="material-icons left">cancel</i>
+                NO ACEPTO
+            </a>
+
+            <a class="waves-effect waves-light btn green white-text" id="acept-terms">
+                <i class="material-icons left">check_box</i>
+                ACEPTAR TODO
+            </a>
+            </div>
+        </div>
         
 
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="js/materialize.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
+        <script type="module" src="js/app.js"></script>
+        
 
     </body>
   </html>
