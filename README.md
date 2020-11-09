@@ -15,7 +15,7 @@ El formulario es trabajado con ayuda del Framework CSS Materialize, su diseño e
 
 <h3> URL de Acceso </h3>
   <ul>
-    <li><a src="https://f3rjara.github.io/upb-stack/index.html"> Vista previa del proyecto </a> </li>
+    <li>Vista previa del proyecto : https://f3rjara.github.io/upb-stack/index.html </li>
   </ul>
   
 <h3> Vista Previa Web </h3>
