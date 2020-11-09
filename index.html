@@ -11,11 +11,7 @@
         <link rel="stylesheet" href="css/main.css">
         <!-- favicon html -->
         <link rel="icon" type="image/png" href="./img/logo.png">
-        <!-- Modules for app -->
-        <script type="module" src="js/dom.js"></script>
-        <script type="module" src="js/load.js"></script>
-        <script type="module" src="js/send_form.js"></script>
-        <script type="module" src="js/subscription.js"></script>        
+        
     </head>
 
     <body>
@@ -25,99 +21,160 @@
             </div>
         </div>
         <div class="row container subscribe">
+
             <div class="col s12 m12 center">
                 <h3>Suscríbete a nuestro boletín</h3>
                 <div class="progress">
                     <div class="indeterminate"></div>
                 </div>
             </div>
-            <div class="col s12">
+
+            <div class="col s12 d-none" id="col_form">
                 <div class="row">
                     <div class="col s12">
-                      <div class="card-panel white card-form">
-                        <span class="black-text">
-                            Por favor complete cada uno de los campos.
-                        </span>
+                        <div class="card-panel white card-form">
+                            <span class="black-text">
+                                Por favor complete cada uno de los campos.
+                            </span>
 
-                        <div class="row">
-                            <form class="col s12 form-news" autocomplete="off" id="formNewsletter">
-                                <div class="row">                                    
-                                    <div class="input-field col s12 m10 push-m1 l6">
-                                        <i class="material-icons prefix">account_circle</i>
-                                        <input id="fr_name" type="text" class="validate" minlength="3" pattern="[a-zA-Z\s]{3,30}" maxlength="30" required>
-                                        <span class="helper-text" data-error="Digite un nombre valido" data-success="Muy bien!"></span>
-                                        <label for="fr_name">Nombres</label>
-                                    </div>
-                                    <div class="input-field col s12 m10 push-m1 l6">
-                                        <i class="material-icons prefix">email</i>
-                                        <input id="fr_email" type="email" class="validate" required>
-                                        <span class="helper-text" data-error="Digite un correo valido" data-success="Muy bien!"></span>
-                                        <label for="fr_email">Correo</label>
-                                    </div>
-
-                                    <div class="input-field col s12 m10 push-m1 l6 input-subs">   
-                                        <i class="material-icons prefix">new_releases</i>
-                                        <input id="fr_news" type="text" value="¿Qué noticias desea recibir?" disabled class="black-text"> 
-                                        <label for="fr_news">Subscripción</label>
-                                        <p>
-                                            <label>
-                                            <input class="with-gap" name="news_option" value="all-news" type="radio" required />
-                                            <span class="black-text">Todas las noticias</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                            <input class="with-gap" name="news_option" value="only-tech" type="radio" required />
-                                            <span class="black-text">Solo las noticias de técnología</span>
-                                            </label>
-                                        </p>
+                            <div class="row">
+                                <form class="col s12 form-news" autocomplete="off" id="formNewsletter">
+                                    <div class="row">                                    
+                                        <div class="input-field col s12 m10 push-m1 l6">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input id="fr_name" type="text" class="validate" minlength="3" pattern="[a-zA-Z\s]{3,30}" maxlength="30" required>
+                                            <span class="helper-text" data-error="Digite un nombre valido" data-success="Muy bien!"></span>
+                                            <label for="fr_name">Nombres</label>
+                                        </div>
                                         
+                                        <div class="input-field col s12 m10 push-m1 l6">
+                                            <i class="material-icons prefix">email</i>
+                                            <input id="fr_email" type="email" class="validate" required>
+                                            <span class="helper-text" data-error="Digite un correo valido" data-success="Muy bien!"></span>
+                                            <label for="fr_email">Correo</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m10 push-m1 l6 input-subs">   
+                                            <i class="material-icons prefix">new_releases</i>
+                                            <input id="fr_news" type="text" value="¿Qué noticias desea recibir?" disabled class="black-text"> 
+                                            <label for="fr_news">Subscripción</label>
+                                            <p>
+                                                <label>
+                                                <input class="with-gap" name="news_option" value="all-news" type="radio" required />
+                                                <span class="black-text">Todas las noticias</span>
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label>
+                                                <input class="with-gap" name="news_option" value="only-tech" type="radio" required />
+                                                <span class="black-text">Solo las noticias de técnología</span>
+                                                </label>
+                                            </p>
+                                        </div>
+
+                                        <div class="input-field col s12 m10 push-m1 l6" id="input_select">
+                                            <i class="material-icons prefix">location_on</i>
+                                            <select required id="fr_city">
+                                            <option value='null' disabled selected>Seleccione una opción</option>
+                                            <option value="Bogotá">Bogotá</option>
+                                            <option value="Medellín">Medellín</option>
+                                            <option value="Cali">Cali</option>
+                                            <option value="Pasto">Pasto</option>
+                                            <option value="Otra ciudad">Otra</option>
+                                            </select>
+                                            <label>Ciudad</label>
+                                        </div>                                        
                                     </div>
 
-                                    <div class="input-field col s12 m10 push-m1 l6" id="input_select">
-                                        <i class="material-icons prefix">location_on</i>
-                                        <select required id="fr_city">
-                                          <option value='null' disabled selected>Seleccione una opción</option>
-                                          <option value="Bogotá">Bogotá</option>
-                                          <option value="Medellín">Medellín</option>
-                                          <option value="Cali">Cali</option>
-                                          <option value="Pasto">Pasto</option>
-                                        </select>
-                                        <label>Ciudad</label>
-                                      </div>
+                                    <div class="row">
+                                        <div class="input-field col s12 m10 push-m1 l6" style="padding-left: 3rem;" >
+                                            <p>
+                                                <label>
+                                                <input id="fr_offers" type="checkbox" value="offers" />
+                                                <span class="black-text">Acepto recibir información sobre ofertas</span>
+                                                </label>
+                                            </p>
+
+                                            <p>
+                                                <label>
+                                                <input id="fr_terms" type="checkbox" value="terms" required/>
+                                                <span><a class="black-text modal-trigger" href="#modal1" >Acepto términos y condiciones del sitio</a></span>
+                                                </label>
+                                            </p>
+                                        </div>
+
+                                        <div class="input-field col s12 m10 push-m1 l6">
+                                            <button class="btn waves-effect waves-light green darken-2 col s12" type="submit" name="submit">
+                                                Suscribirme
+                                                <i class="material-icons right">send</i>
+                                            </button>
+                                        </div>
                                     </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                                    <div class="input-field col s12 m10 push-m1 l6" >
-                                        <p>
-                                            <label>
-                                            <input id="fr_offers" type="checkbox" value="offers" required />
-                                            <span class="black-text">Acepto recibir información sobre ofertas</span>
-                                            </label>
-                                        </p>
+            <div class="col s12 m10 push-m1 l6 push-l3 d-none" id="col_user">
+                <div class="card-panel white card-form">
+                    <div class="row center"> 
+                        <div class="co s12 right">
+                            <div class="chip orange black-text">
+                                <b>SUSCRITO</b>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <i class="large material-icons col s12">assignment_ind</i>   
+                            <h4 id="sus_name">Fernando Jaramillo</h4>
+                            <span id="sus_email">f3rjara@gmail.com</span>
+                        </div>  
 
-                                        <p>
-                                            <label>
-                                            <input id="fr_terms" type="checkbox" value="terms" required/>
-                                            <span><a class="black-text modal-trigger" href="#modal1" >Acepto términos y condiciones del sitio</a></span>
-                                            </label>
-                                        </p>
-                                    </div>
-
-                                    <div class="input-field col s12 m10 push-m1 l6">
-                                        <button class="btn waves-effect waves-light green darken-2 col s12" type="submit" name="submit">
-                                            Suscribirme
-                                            <i class="material-icons right">send</i>
-                                          </button>
-                                    </div>
-
-                                </div>
-                            </form>
+                        <div class="progress col s6 push-s3 separate_progress" >
+                            <div class="indeterminate"></div>
                         </div>
 
-                      </div>
+                        <div class="col s12">                            
+                            <div class="input-field col s12 m10 push-m1">
+                                <i class="material-icons prefix">new_releases</i>
+                                <input id="sus_news" type="text" disabled class="validate black-text" value="Todas las Noticias">
+                                <label for="sus_news">Subscripción a</label>
+                            </div>
+
+                            <div class="input-field col s12 m10 push-m1">
+                                <i class="material-icons prefix">location_on</i>
+                                <input id="sus_city" type="text" disabled class="validate black-text" value="Pasto">
+                                <label for="sus_city">Ciudad</label>
+                            </div>
+
+                            <div class="input-field col s12 m10 push-m1">
+                                <i class="material-icons prefix">info</i>
+                                <input id="sus_offers" type="text" disabled class="validate black-text" value="NO">
+                                <label for="sus_offers">Recibe información sobre ofertas?</label>
+                            </div>
+
+                            <div class="input-field col s12 m10 push-m1">
+                                <i class="material-icons prefix">date_range</i>
+                                <input id="sus_date" type="text" disabled class="black-text" value="NO">
+                                <label for="sus_date">Suscrito desde</label>
+                            </div>
+
+                            <div class="input-field col s12 m10 push-m1">
+                                <a class="waves-effect waves-light btn red col s12" id="sus_delete">
+                                    <i class="material-icons left">delete_forever</i>
+                                    Cancelar mi suscripcion
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
+
+        </div>
+
+
         </div>
 
         <!-- Modal Structure -->
@@ -151,8 +208,17 @@
 
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="js/materialize.js"></script>
+        <script type="text/javascript" src="js/moment.min.js"></script>
         <script type="module" src="js/app.js"></script>
-        
+        <!-- Modules for app -->
+        <script type="module" src="js/dom.js"></script>
+        <script type="module" src="js/load.js"></script>
+        <script type="module" src="js/send_form.js"></script>
+        <script type="module" src="js/subscription.js"></script>
+        <script type="module" src="js/validateForm.js"></script>
+        <script type="module" src="js/check_user.js"></script>
+        <script type="module" src="js/load_data.js"></script>
+        <script type="module" src="js/cancel_subs.js"></script>
 
     </body>
   </html>
