@@ -19,7 +19,7 @@ El formulario es trabajado con ayuda del Framework CSS Materialize, su diseño e
   </ul>
   
 <h3> Vista Previa Web </h3>
-<img href="https://s3.amazonaws.com/awesomescreenshot/upload/1193857/1232116/669bc8a4-6e7f-4ae2-4105-1776b2c072fc.png?AWSAccessKeyId=AKIAJSCJQ2NM3XLFPVKA&Expires=1604976603&Signature=iiR5p6GIV3J1G4x%2FTRt3EVxah8Y%3D" />
+![alt text](https://f3rjara.github.io/upb-stack/img/mobil.png) 
 
 <h3> Vista previa Movil </h3>
 ![alt text](http://url/to/img.png) 
