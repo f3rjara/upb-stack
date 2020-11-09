@@ -12,12 +12,14 @@ El formulario es trabajado con ayuda del Framework CSS Materialize, su diseño e
   <li>Materialize CSS</li>
   <li>Moment.js </li>
 </ul>
+
 <h3> URL de Acceso </h3>
   <ul>
-  <li>HTML 5 </li>
-</ul>
+    <li><a src="https://f3rjara.github.io/upb-stack/index.html"> Vista previa del proyecto </a> </li>
+  </ul>
+  
 <h3> Vista Previa Web </h3>
-![alt text](http://url/to/img.png) 
+<img href="https://s3.amazonaws.com/awesomescreenshot/upload/1193857/1232116/669bc8a4-6e7f-4ae2-4105-1776b2c072fc.png?AWSAccessKeyId=AKIAJSCJQ2NM3XLFPVKA&Expires=1604976603&Signature=iiR5p6GIV3J1G4x%2FTRt3EVxah8Y%3D" />
 
 <h3> Vista previa Movil </h3>
 ![alt text](http://url/to/img.png) 
