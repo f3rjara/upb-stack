@@ -19,15 +19,12 @@ El formulario es trabajado con ayuda del Framework CSS Materialize, su diseño e
   </ul>
 
 <h3> Diseño Desktop</h3>
-  <ul>
-    <li>
-      ![desktop](https://raw.githubusercontent.com/f3rjara/upb-stack/main/img/desktop.png)      
-    </li>
-  </ul>
+
+![Desktop](https://raw.githubusercontent.com/f3rjara/upb-stack/main/img/desktop.png)
+    
   
- <h3> Diseño Mobil</h3>
-  <ul>
-    <li>
-      ![desktop](https://raw.githubusercontent.com/f3rjara/upb-stack/main/img/mobil.png)      
-    </li>
-  </ul>
+ <h3> Diseño Móvil</h3>
+
+![Desktop](https://raw.githubusercontent.com/f3rjara/upb-stack/main/img/mobil.png)     
+
+
